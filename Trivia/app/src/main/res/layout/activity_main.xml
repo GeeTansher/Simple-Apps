@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141A33"
+        android:elevation="12dp"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            style="@style/mainTextStyleTitle"
+            android:layout_marginTop="16dp"
+            android:text="@string/titleText"
+            android:textColor="@color/LightGreyTextColour"
+            android:textSize="24sp"
+            app:layout_constraintHorizontal_bias="0.08"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvOutOfQuestion"
+            android:text="@string/outOfTextQuestion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+            style="@style/outOfQuestionThemTV" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="153dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#18213A"
+            android:elevation="12dp"
+            app:cardCornerRadius="6dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOutOfQuestion">
+
+            <TextView
+                android:id="@+id/tvQuestion"
+                style="@style/mainTextStyleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/questionTextPadding"
+                android:textColor="@color/white" />
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/btnTrue"
+            style="@style/buttonStyle"
+            android:layout_width="385dp"
+            android:text="@string/trueButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvQuestion" />
+
+        <Button
+            android:id="@+id/btnFalse"
+            style="@style/buttonStyle"
+            android:layout_width="0dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/falseButoon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnTrue" />
+
+        <Button
+            android:id="@+id/btnNext"
+            style="@style/buttonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="61dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/nextButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.883"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnFalse" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            style="@style/currentScoreTV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOutOfQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+        <TextView
+            android:id="@+id/tvHighScore"
+            style="@style/currentScoreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvOutOfQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/tvScore" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

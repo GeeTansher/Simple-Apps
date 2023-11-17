@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Trivia</string>
+    <string name="titleText">Trivia</string>
+    <string name="outOfTextQuestion">Question: 45/89</string>
+    <string name="trueButton">True</string>
+    <string name="falseButoon">False</string>
+    <string name="nextButton">Next</string>
+    <string name="formattedTextViewOutOfQuestion">Question: %d/%d</string>
+    <string name="incorrectAns">Incorrect  Answer !!</string>
+    <string name="correctAns">Correct Answer !!</string>
+</resources>
